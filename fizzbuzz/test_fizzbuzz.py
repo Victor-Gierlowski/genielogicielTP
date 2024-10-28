@@ -2,9 +2,11 @@
 from unittest import TestCase
 from fizzbuzz import FizzBuzz
 
+
 class FizzBuzzTest(TestCase):
     def setUp(self):
         self.fizzbuzz = FizzBuzz()
+
     def tearDown(self):
         self.fizzbuzz = None
 
@@ -16,19 +18,21 @@ class FizzBuzzTest(TestCase):
         self.assertEqual('11', self.fizzbuzz.convert(11))
         self.assertEqual('13', self.fizzbuzz.convert(13))
         self.assertEqual('14', self.fizzbuzz.convert(14))
-    def test_returns_number_for_input_divisible_by_3_not_5(self):
-        self.assertEqual('Fizz',self.fizzbuzz.convert(3))
-        self.assertEqual('Fizz',self.fizzbuzz.convert(6))
-        self.assertEqual('Fizz',self.fizzbuzz.convert(9))
-        self.assertEqual('Fizz',self.fizzbuzz.convert(12))
-    def test_returns_number_input_divisible_by_5_not_3(self):
-        self.assertEqual('Buzz',self.fizzbuzz.convert(5))
-        self.assertEqual('Buzz',self.fizzbuzz.convert(10))
-        self.assertEqual('Buzz',self.fizzbuzz.convert(20))
-        self.assertEqual('Buzz',self.fizzbuzz.convert(25))
-    def test_returns_number_input_divisible_by_5_and_3(self):
-        self.assertEqual('FizzBuzz',self.fizzbuzz.convert(15))
-        self.assertEqual('FizzBuzz',self.fizzbuzz.convert(30))
-        self.assertEqual('FizzBuzz',self.fizzbuzz.convert(45))
-        self.assertEqual('FizzBuzz',self.fizzbuzz.convert(60))
 
+    def test_returns_number_for_input_divisible_by_3_not_5(self):
+        self.assertEqual('Fizz', self.fizzbuzz.convert(3))
+        self.assertEqual('Fizz', self.fizzbuzz.convert(6))
+        self.assertEqual('Fizz', self.fizzbuzz.convert(9))
+        self.assertEqual('Fizz', self.fizzbuzz.convert(12))
+
+    def test_returns_number_input_divisible_by_5_not_3(self):
+        self.assertEqual('Buzz', self.fizzbuzz.convert(5))
+        self.assertEqual('Buzz', self.fizzbuzz.convert(10))
+        self.assertEqual('Buzz', self.fizzbuzz.convert(20))
+        self.assertEqual('Buzz', self.fizzbuzz.convert(25))
+
+    def test_returns_number_input_divisible_by_5_and_3(self):
+        self.assertEqual('FizzBuzz', self.fizzbuzz.convert(15))
+        self.assertEqual('FizzBuzz', self.fizzbuzz.convert(30))
+        self.assertEqual('FizzBuzz', self.fizzbuzz.convert(45))
+        self.assertEqual('FizzBuzz', self.fizzbuzz.convert(60))
